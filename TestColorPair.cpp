@@ -13,8 +13,8 @@ namespace TelCoColorCoder {
         std::cout << "Pair Number: " << pairNumber
                   << " => " << result << std::endl;
 
-        if (colorPair.GetMajorColor() != expectedMajor ||
-            colorPair.GetMinorColor() != expectedMinor) {
+        if (colorPair.getMajor() != expectedMajor ||
+            colorPair.getMinor() != expectedMinor) {
             std::cerr << "Test failed for pair number: " << pairNumber << std::endl;
         }
     }
