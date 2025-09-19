@@ -1,6 +1,5 @@
 #ifndef COLORUTILS_H
 #define COLORUTILS_H
-
 #include "ColorPair.h"
 
 namespace TelCoColorCoder
