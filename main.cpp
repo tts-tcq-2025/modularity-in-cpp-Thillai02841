@@ -3,9 +3,7 @@
 #include "ColorUtils.h"
 #include "TestColorPair.h"
 
-using namespace TelCoColorCoder;
-
 int main() {
-    RunTests();
+    TelCoColorCoder::RunTests();
     return 0;
 }
