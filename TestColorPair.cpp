@@ -4,7 +4,6 @@
 #include "TestColorPair.h"
 
 namespace TelCoColorCoder {
-
     // Test a single color pair and print the result
     void TestColorPairFunction(int pairNumber, MajorColor expectedMajor, MinorColor expectedMinor) {
         ColorPair colorPair = GetColorFromPairNumber(pairNumber);
