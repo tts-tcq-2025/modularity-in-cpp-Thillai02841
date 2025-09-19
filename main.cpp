@@ -1,4 +1,3 @@
-```cpp
 #include <iostream>
 #include "ColorPair.h"
 #include "ColorUtils.h"
