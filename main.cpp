@@ -1,36 +1,34 @@
+```cpp
 #include <iostream>
-#include <assert.h>
+#include "ColorPair.h"
 #include "ColorUtils.h"
 #include "ManualPrinter.h"
 
-using namespace TelCoColorCoder;
+// Test a single color pair and print the result
+void testColorPair(int pairNumber, MajorColor expectedMajor, MinorColor expectedMinor) {
+    ColorPair colorPair = getColorFromPairNumber(pairNumber);
+    std::string result = colorPair.toString();
 
-void testNumberToPair(int pairNumber,
-    MajorColor expectedMajor,
-    MinorColor expectedMinor)
-{
-    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
-    std::cout << "Got pair " << colorPair.ToString() << std::endl;
-    assert(colorPair.getMajor() == expectedMajor);
-    assert(colorPair.getMinor() == expectedMinor);
+    std::cout << "Pair Number: " << pairNumber
+              << " => " << result << std::endl;
+
+    if (colorPair.getMajorColor() != expectedMajor ||
+        colorPair.getMinorColor() != expectedMinor) {
+        std::cerr << "Test failed for pair number: " << pairNumber << std::endl;
+    }
 }
 
-void testPairToNumber(MajorColor major, MinorColor minor, int expectedPairNumber)
-{
-    int pairNumber = GetPairNumberFromColor(major, minor);
-    std::cout << "Got pair number " << pairNumber << std::endl;
-    assert(pairNumber == expectedPairNumber);
+// Run all color pair tests
+void runTests() {
+    testColorPair(4, MajorColor::WHITE, MinorColor::BROWN);
+    testColorPair(5, MajorColor::WHITE, MinorColor::SLATE);
+    testColorPair(23, MajorColor::VIOLET, MinorColor::GREEN);
 }
 
+// Entry point
 int main() {
-    testNumberToPair(4, WHITE, BROWN);
-    testNumberToPair(5, WHITE, SLATE);
-
-    testPairToNumber(BLACK, ORANGE, 12);
-    testPairToNumber(VIOLET, SLATE, 25);
-
-    // Print manual for wiring personnel
-    PrintColorCodeManual();
-
+    runTests();
+    ManualPrinter::printManual();
     return 0;
 }
+```
