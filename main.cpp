@@ -3,6 +3,8 @@
 #include "ColorUtils.h"
 #include "ManualPrinter.h"
 
+using namespace TelCoColorCoder;
+
 // Test a single color pair and print the result
 void testColorPair(int pairNumber, MajorColor expectedMajor, MinorColor expectedMinor) {
     ColorPair colorPair = getColorFromPairNumber(pairNumber);
