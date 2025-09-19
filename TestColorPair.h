@@ -4,5 +4,4 @@
 namespace TelCoColorCoder {
     void RunTests();
 }
-
 #endif // TESTCOLORPAIR_H
