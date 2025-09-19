@@ -2,7 +2,6 @@
 #define COLORPAIR_H
 
 #include <string>
-
 namespace TelCoColorCoder
 {
     enum MajorColor {WHITE, RED, BLACK, YELLOW, VIOLET};
