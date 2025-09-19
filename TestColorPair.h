@@ -2,7 +2,7 @@
 #define TESTCOLORPAIR_H
 
 namespace TelCoColorCoder {
-    void runTests();
+    void RunTests();
 }
 
 #endif // TESTCOLORPAIR_H
