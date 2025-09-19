@@ -5,6 +5,6 @@
 using namespace TelCoColorCoder;
 
 int main() {
-    runTests();
+    RunTests();
     return 0;
 }
