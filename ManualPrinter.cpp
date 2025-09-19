@@ -1,7 +1,6 @@
 #include "ManualPrinter.h"
 #include "ColorUtils.h"
 #include <iostream>
-
 namespace TelCoColorCoder
 {
     void PrintColorCodeManual() {
